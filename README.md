@@ -2,7 +2,7 @@
 This project is designed to showcase the new experimental feature added to docker, container migration.
 
 ##Container description:
-The container is hosting a web server and hosts a continous stream of jpeg images to the web page. All this while an image processing thread run in the backgrond. It run in the background to show retention of state of a program (even in something as memory intensive as multithreaded image processing).
+The container is hosting a web server and hosts a continuous stream of jpeg images to the web page. All this while an image processing thread runs in the background. It runs in the background to show the capability of doker checkpoints to save the state of a program (even in something as memory intensive as multithreaded image processing).
 
 ##Migration: 
 The shell script is designed to start a new container based on the given dockerfile, stops and checkpoints it after a few seconds and creates another container (that was created based on the same dockerfile) conitnuing EXACTLY where the previous container left off.
