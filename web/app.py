@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 from flask import Flask, render_template, Response
 import skvideo.io
-#import skimage.io
 import threading
 import argparse
 import cv2
@@ -14,11 +13,15 @@ from flask import Flask
 from time import sleep
 
 app = Flask(__name__)
+#global variables
 began = False
 switch = False
 frame = None
+
+#declaring event variables for notification of processed image
 condition=threading.Event()
-condition_shakehand = threading.Event()
+
+#background thread routine
 def processor():
         # construct the argument parser and parse the arguments
         ap = argparse.ArgumentParser()
