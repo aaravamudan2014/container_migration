@@ -12,6 +12,6 @@ echo "\n\ncheckpoint created"
 echo "\n\n main container stopped... starting new container"
 sleep 0.5
 sudo docker stop pg1
-sudo docker start --checkpoint-dir=/tmp --checkpoint=checkpoint_new pg2 &
+sudo docker start --checkpoint-dir=/tmp --checkpoint=checkpoint_new pg2 
 firefox --new-window http://127.0.0.1:8000/
 echo "\n\n clone started"
