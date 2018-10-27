@@ -20,11 +20,8 @@ began = False
 switch = False
 frame = None
 
-<<<<<<< HEAD
 #thrad event notification variable
-=======
 #declaring event variables for notification of processed image
->>>>>>> 7276c3bd48cd75033b4ed5c1d26285a397cd885b
 condition=threading.Event()
 
 #background thread routine
